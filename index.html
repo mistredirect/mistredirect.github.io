@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIST NY 2022 QR</title>
+    <style>
+      body {
+        font-size: 2em;
+      }
+      div {
+        margin: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <noscript>
+        This page requires Javascript to function properly.
+        <br>
+        <a target="_blank" href="https://support.google.com/adsense/answer/12654?hl=en">
+          Please follow the steps here to enable it.
+        </a>
+      </noscript>
+    </div>
+    <div>
+      <a id="dynamic-link" href="https://nymist.com">
+        Please click on this link if you are not automatically redirected
+      </a>
+    </div>
+    <script>
+      const NEW_BASE_URL = "https://google.com/search?q=";
+      const hash = window.location.hash.slice(1);
+      const newUrl = `${NEW_BASE_URL}${hash}`;
+      const dynamicLink = document.querySelector('a#dynamic-link');
+      dynamicLink.href = newUrl;
+      window.location.replace(dynamicLink);
+    </script>
+  </body>
+</html>
